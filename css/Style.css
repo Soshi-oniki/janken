@@ -1,6 +1,12 @@
 @charset "ufd-8";
 
 h1{
-    color: #000000;
+    color: white;
     font-size: 30px;
+}
+
+.header
+{
+    display: flex;
+    background-color:black;
 }
