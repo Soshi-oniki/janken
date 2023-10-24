@@ -1,5 +1,7 @@
 @charset "ufd-8";
 
+p.sample1 {font-family:"Meiryo"; }
+
 h1{
     color: white;
     font-size: 30px;
