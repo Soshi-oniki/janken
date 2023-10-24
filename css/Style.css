@@ -1,7 +1,7 @@
 @charset "ufd-8";
 
 body{
-    p.sample1 {font-family:serif; }
+    font-family:system-ui;
 }
 
 h1{
