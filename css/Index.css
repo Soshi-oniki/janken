@@ -14,3 +14,7 @@ h1{
     display: flex;
     background-color:black;
 }
+
+iframe{
+    margin-right: 20px;
+}
