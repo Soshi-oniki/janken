@@ -18,3 +18,14 @@ h1{
 iframe{
     margin-right: 20px;
 }
+
+iframe.scratch {
+    width: 485px;
+    height: 402px;
+  }
+  
+  @media screen and (max-width: 524px) {
+    iframe.scratch {
+      width: 100%;
+    }
+  }
