@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>じゃんけん勝負!!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        #result {
+            font-size: 40px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>じゃんけん勝負!!</h1>
+    <button onclick="play('グー')">グー</button>
+    <button onclick="play('チョキ')">チョキ</button>
+    <button onclick="play('パー')">パー</button>
+    <div id="result"></div>
+
+    <script>
+        function play(playerChoice) {
+            const choices = ['グー', 'チョキ', 'パー'];
+            const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+            let result = '';
+
+            if (playerChoice === computerChoice) {
+                result = '引き分け！';
+            } else if (
+                (playerChoice === 'グー' && computerChoice === 'チョキ') ||
+                (playerChoice === 'チョキ' && computerChoice === 'パー') ||
+                (playerChoice === 'パー' && computerChoice === 'グー')
+            ) {
+                result = 'あなたの勝ち！';
+            } else {
+                result = 'あなたの負け！';
+            }
+
+            document.getElementById('result').innerHTML = `
+                あなたの手: ${playerChoice} <br>
+                コンピュータの手: ${computerChoice} <br>
+                結果: ${result}
+            `;
+        }
+    </script>
+</body>
+</html>
